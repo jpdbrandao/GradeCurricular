@@ -23,7 +23,7 @@ class FuncionarioService {
         $stmt->bindValue(':id', $funcionario->id);
         $stmt->bindValue(':nome', $funcionario->nome);
         $stmt->bindValue(':usuarioId', $funcionario->usuario->id);
-        
+
         if (!$stmt->execute()) {
             throw new Exception("Erro ao tentar cadastrar o funcionario");
         }
@@ -45,19 +45,19 @@ class FuncionarioService {
                 . "f.Id, f.Nome, f.UsuarioId, u.NivelAcesso "
                 . "FROM funcionario f "
                 . "LEFT JOIN usuario u ON f.UsuarioId = u.Id";
-        
+
         $stmt = $this->conn->Conectar()->prepare($query);
         $stmt->execute();
-        
+
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function Excluir($id) {
         $query = "DELETE FROM funcionario WHERE Id = :id";
-        
+
         $stmt = $this->conn->Conectar()->prepare($query);
         $stmt->bindValue(':id', $id);
-        
+
         if (!$stmt->execute()) {
             throw new Exception("Não é possivel excluir um funcionario com atendimentos registrados");
         }
@@ -71,11 +71,11 @@ class FuncionarioService {
 
         $stmt->execute();
         $resultado = $stmt->fetch(PDO::FETCH_OBJ);
-        
+
         if (empty($resultado)) {
             throw new Exception("Funcionario não encontrado");
         }
-        
+
         return new Funcionario($resultado->Id, $resultado->Nome);
     }
 

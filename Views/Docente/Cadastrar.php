@@ -1,3 +1,7 @@
+<?php 
+   require_once '../../Models/Enum/TipoDeContrato.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -63,8 +67,8 @@
                                 <option value="<?= tipoDeContrato::Eventual; ?>">Eventual</option>
                                 <option value="<?= tipoDeContrato::Aulista; ?>">Aulista</option>
                                 <option value="<?= tipoDeContrato::Integral; ?>">Integral</option>
-								<option value="<?= tipoDeContrato::Parcial; ?>">Parcial</option>
-								<option value="<?= tipoDeContrato::Sem informação; ?>">Sem informação</option>
+				<option value="<?= tipoDeContrato::Parcial; ?>">Parcial</option>
+                                <option value="<?= tipoDeContrato::Seminformação; ?>">Sem informação</option>
                             </select>
                         </div>
                   

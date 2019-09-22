@@ -6,5 +6,5 @@ class TipoDeContrato {
 	const Aulista = 3;
 	const Parcial = 4;
 	const Integral = 5;
-	const Sem informação = 6;
+	const Seminformação = 6;
 	}
