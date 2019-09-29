@@ -73,14 +73,14 @@ require_once '../../Models/Enum/TipoDeContrato.php'; // incluindo nesse arquivo 
                 <!-- Tipo de cadastro -->
                 <div class="form-group">
                     <!-- area para tipo de contratos-->
-                    <label for="tipoDeContrato">Tipo de contrato</label> <!-- label para dizer o que é pra ser digitado no input -->
-                    <select class="form-control" id="tipoDeContrato" name="tipoDeContrato"> <!-- select para o tipo de contrato -->
-                        <option value="<?= tipoDeContrato::Obreiro; ?>">Obreiro</option> <!-- tipo de contrato é obreiro -->
-                        <option value="<?= tipoDeContrato::Eventual; ?>">Eventual</option> <!-- tipo de contrato é eventual -->
-                        <option value="<?= tipoDeContrato::Aulista; ?>">Aulista</option> <!-- tipo de contrato é aulista -->
-                        <option value="<?= tipoDeContrato::Integral; ?>">Integral</option> <!-- tipo de contrato é integral -->
-                        <option value="<?= tipoDeContrato::Parcial; ?>">Parcial</option> <!-- tipo de contrato é parcial -->
-                        <option value="<?= tipoDeContrato::Seminformação; ?>">Sem informação</option> <!-- sem informacao do tipo de contrato -->
+                    <label for="TipoDeContrato">Tipo de contrato</label> <!-- label para dizer o que é pra ser digitado no input -->
+                    <select class="form-control" id="TipoDeContrato" name="TipoDeContrato"> <!-- select para o tipo de contrato -->
+                        <option value="<?= TipoDeContrato::Obreiro; ?>">Obreiro</option> <!-- tipo de contrato é obreiro -->
+                        <option value="<?= TipoDeContrato::Eventual; ?>">Eventual</option> <!-- tipo de contrato é eventual -->
+                        <option value="<?= TipoDeContrato::Aulista; ?>">Aulista</option> <!-- tipo de contrato é aulista -->
+                        <option value="<?= TipoDeContrato::Integral; ?>">Integral</option> <!-- tipo de contrato é integral -->
+                        <option value="<?= TipoDeContrato::Parcial; ?>">Parcial</option> <!-- tipo de contrato é parcial -->
+                        <option value="<?= TipoDeContrato::Seminformação; ?>">Sem informação</option> <!-- sem informacao do tipo de contrato -->
                     </select>
                 </div>
 
