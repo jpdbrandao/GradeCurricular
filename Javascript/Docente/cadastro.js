@@ -11,9 +11,9 @@ document.write(unescape('%3Cscript src="../../JavaScript/validate.min.js" type="
 document.write(unescape('%3Cscript src="../../JavaScript/validateMessage.js" type="text/javascript"%3E%3C/script%3E'));
 
 
-$(document).ready(() => {
-    
-    $('form.needs-validation').validate({
+$(document).ready(() => { //Espera o documento html carregar para executar o codigo
+
+    $('form.needs-validation').validate({ //Função pronta para
         submitHandler: function (form) {
             $(form).trigger("Enviar");
         },
@@ -48,6 +48,6 @@ $(document).ready(() => {
         metodo: "metodoDocente", //qual o tipo de metodo (metodo seguido do nome do controller)
         valor: "Cadastrar" //Nome do metodo que irá executar
     };
-    
+
     EfetuarCadastro(controller);
 });
