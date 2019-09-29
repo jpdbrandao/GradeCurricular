@@ -73,14 +73,14 @@ require_once '../../Models/Enum/TipoDeContrato.php'; // incluindo nesse arquivo 
                 <!-- Tipo de cadastro -->
                 <div class="form-group">
                     <!-- area para tipo de contratos-->
-                    <label for="tipoDeContrato">Tipo de contrato</label> <!-- label para dizer o que tem queser digitado no input -->
-                    <select class="form-control" id="tipoDeContrato" name="tipoDeContrato">
-                        <option value="<?= tipoDeContrato::Obreiro; ?>">Obreiro</option>
-                        <option value="<?= tipoDeContrato::Eventual; ?>">Eventual</option>
-                        <option value="<?= tipoDeContrato::Aulista; ?>">Aulista</option>
-                        <option value="<?= tipoDeContrato::Integral; ?>">Integral</option>
-                        <option value="<?= tipoDeContrato::Parcial; ?>">Parcial</option>
-                        <option value="<?= tipoDeContrato::Seminformação; ?>">Sem informação</option>
+                    <label for="tipoDeContrato">Tipo de contrato</label> <!-- label para dizer o que é pra ser digitado no input -->
+                    <select class="form-control" id="tipoDeContrato" name="tipoDeContrato"> <!-- select para o tipo de contrato -->
+                        <option value="<?= tipoDeContrato::Obreiro; ?>">Obreiro</option> <!-- tipo de contrato é obreiro -->
+                        <option value="<?= tipoDeContrato::Eventual; ?>">Eventual</option> <!-- tipo de contrato é eventual -->
+                        <option value="<?= tipoDeContrato::Aulista; ?>">Aulista</option> <!-- tipo de contrato é aulista -->
+                        <option value="<?= tipoDeContrato::Integral; ?>">Integral</option> <!-- tipo de contrato é integral -->
+                        <option value="<?= tipoDeContrato::Parcial; ?>">Parcial</option> <!-- tipo de contrato é parcial -->
+                        <option value="<?= tipoDeContrato::Seminformação; ?>">Sem informação</option> <!-- sem informacao do tipo de contrato -->
                     </select>
                 </div>
 
@@ -88,10 +88,10 @@ require_once '../../Models/Enum/TipoDeContrato.php'; // incluindo nesse arquivo 
                 <!-- Botões -->
                 <div class="form-row">
                     <div class="form-group mt-4 col-sm">
-                        <input class="btn btn-secondary btn-block" type="submit" value="Cadastrar Docente" />
+                        <input class="btn btn-secondary btn-block" type="submit" value="Cadastrar Docente" /> <!-- botão que valida o cadastro -->
                     </div>
                     <div class="form-group mt-sm-4 col-sm">
-                        <a class="btn btn-secondary btn-block" href="../Geral/Home.php">Cancelar</a>
+                        <a class="btn btn-secondary btn-block" href="../Geral/Home.php">Cancelar</a> <!-- botão (link) que volta para a home -->
                     </div>
                 </div>
             </form>
@@ -99,15 +99,15 @@ require_once '../../Models/Enum/TipoDeContrato.php'; // incluindo nesse arquivo 
     </div>
 
     <!-- Modal de resposta -->
-    <?php require_once '../Compartilhado/ModalErro.php'; ?>
+    <?php require_once '../Compartilhado/ModalErro.php'; ?> <!-- modal de erro -->
 
     <!-- JQuery - popper - Bootstrap-->
-    <script src="../../JavaScript/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../JavaScript/jquery-3.4.1.min.js"></script> <!-- importação do JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> <!-- importação do popper (requisito do bootstrap) -->
+    <script src="../../bootstrap/js/bootstrap.min.js"></script> <!-- importação do bootstrap -->
 
     <!-- Scripts Personalizados -->
-    <script src="../../JavaScript/Funcionario/cadastro.js"></script>
+    <script src="../../JavaScript/Funcionario/cadastro.js"></script> <!-- importação dos scripts personalizados -->
 </body>
 
 </html>
