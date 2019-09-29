@@ -1,10 +1,10 @@
-<?php
+<?php //começando cadigo php
 
-if (!defined('__ROOT__')) {
-    define('__ROOT__', dirname(__FILE__, 2));
+if (!defined('__ROOT__')) { //verifica se a constante root não está definida
+    define('__ROOT__', dirname(__FILE__, 2)); //define a constante root como o caminho 2 pastas acima 
 }
 
-require_once(__ROOT__ . '/Models/Funcionario.php');
+require_once(__ROOT__ . '/Models/Funcionario.php'); //incluindo nesse
 require_once(__ROOT__ . '/Services/FuncionarioService.php');
 require_once(__ROOT__ . '/Controllers/UsuarioController.php');
 
