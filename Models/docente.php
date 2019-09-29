@@ -24,7 +24,7 @@ class Docente implements JsonSerializable {// criação da classe
     }
 
     public function jsonSerialize() {
-        return get_object_vars($this);// declaraçao de exceções
+        return get_object_vars($this);// Retorno da implementação do jsonSerialize
     }
 
 }
