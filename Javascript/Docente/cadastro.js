@@ -13,38 +13,38 @@ document.write(unescape('%3Cscript src="../../JavaScript/validateMessage.js" typ
 
 $(document).ready(() => { //Espera o documento html carregar para executar o codigo
 
-    $('form.needs-validation').validate({ //Função pronta para
-        submitHandler: function (form) {
-            $(form).trigger("Enviar");
+    $('form.needs-validation').validate({ //Função pronta para fazer a validação de formularios no front-end
+        submitHandler: function (form) { //Define o comportamento do formulario caso ele seja valido
+            $(form).trigger("Enviar"); //Aciona o evento enviar que está ligado ao formulario
         },
-        onfocusout: function (element) {
-            $(element).valid();
+        onfocusout: function (element) { 
+            $(element).valid(); //Define que vai verificar a validação do input ao ele perder o foco
         },
-        errorPlacement: function (error, element) {
-            error.addClass("invalid-feedback");
-            error.insertAfter(element);
+        errorPlacement: function (error, element) { //Configura o elemento que vai ser utilizado para mostrar o erro
+            error.addClass("invalid-feedback"); //Acidiona uma classe de erro a esse elemento (bootstrap)
+            error.insertAfter(element); //Insere o elemento de erro logo depois do input que aconteceu o erro
         },
-        errorClass: "is-invalid",
-        validClass: "is-valid",
+        errorClass: "is-invalid", //Define a classe que vai ser colocada no input se o input for invalido
+        validClass: "is-valid", //Define a classe que vai ser colocada no input se ele for valido
 
-        rules: {
-            nome: {
-                required: true
+        rules: { //Define as regras de validação do formulario
+            nome: { //No campo com o name 'nome'
+                required: true //Define que ele é obrigatorio
             },
-            especialidade: {
-                required: true
+            especialidade: { //no campo com o name 'especialidade'
+                required: true //Define como obrigatorio
             },
-            email: {
-                required: true
+            email: { //^ name 'email'
+                required: true //^
             },
-            lattes: {
-                required: true
+            lattes: { //^ name 'lattes'
+                required: true //^
             }
         }
     });
 
-    let controller = {
-        controller: "../../Controllers/docenteController.php", //Url para o controller
+    let controller = { //Criação do objeto necessario para a efetuação do cadastro
+        controller: "../../Controllers/docenteController.php", //Define o local do controller e o controller para onde será enviado o formulario
         metodo: "metodoDocente", //qual o tipo de metodo (metodo seguido do nome do controller)
         valor: "Cadastrar" //Nome do metodo que irá executar
     };
